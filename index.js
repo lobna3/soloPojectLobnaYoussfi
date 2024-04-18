@@ -63,8 +63,9 @@ function each(array, func) {
     return obj
   }
 
-  var add = function () {
-    this.items.push(task1)
+  var add = function (desciption,dateDeadline,evaluation) {
+    var newtask=makeTask(desciption,dateDeadline,evaluation)
+    this.items.push(newtask)
     return this.items
   }
 
@@ -104,14 +105,44 @@ function each(array, func) {
     }
    }
    
-   var task1= makeTask("","","")
-   var task2=makeTask("","","")
-   var task3= makeTask("","","")
+   var task1= makeTask("Task1","30/04/2024"," Task 1 not complete")
+   var task2=makeTask("Task2","30/05/2024"," Task 2 not complete")
+   var task3= makeTask("Task3","21/06/2024"," Task 3 not Complete")
+   var task4= makeTask("Task4","01/07/2024"," Task 4 not Complete")
+   var task5= makeTask("Task5","02/08/2024"," Task 5 not Complete")
 
-   $('li#des').append(task1.desciption)
-   $('li#datedeadline').append(task1.dateDeadline)
-   $('li#date').append(task1.date)
-   $('li#evaluation').append(task1.evaluation)
+   $('td#id').append(task1.id)
+   $('td#des').append(task1.desciption)
+   $('td#datedeadline').append(task1.dateDeadline)
+   $('td#date').append(task1.date)
+   $('td#evaluation').append(task1.evaluation)
+
+   $('td#id2').append(task2.id)
+   $('td#des2').append(task2.desciption)
+   $('td#datedeadline2').append(task2.dateDeadline)
+   $('td#date2').append(task2.date)
+   $('td#evaluation2').append(task2.evaluation)
+
+
+   $('td#id3').append(task3.id)
+   $('td#des3').append(task3.desciption)
+   $('td#datedeadline3').append(task3.dateDeadline)
+   $('td#date3').append(task3.date)
+   $('td#evaluation3').append(task3.evaluation)
+
+   $('td#id4').append(task4.id)
+   $('td#des4').append(task4.desciption)
+   $('td#datedeadline4').append(task4.dateDeadline)
+   $('td#date4').append(task4.date)
+   $('td#evaluation4').append(task4.evaluation)
+
+   $('td#id5').append(task5.id)
+   $('td#des5').append(task5.desciption)
+   $('td#datedeadline5').append(task5.dateDeadline)
+   $('td#date5').append(task5.date)
+   $('td#evaluation5').append(task5.evaluation)
+
+
    $('#images').attr('src', task1.images[0])
    
    var count =0
@@ -123,10 +154,12 @@ function each(array, func) {
      }
    });
 
-   var shop1 = makeShop()
+var shop1 = makeShop()
 shop1.add(task1)
 shop1.add(task2)
 shop1.add(task3)
+shop1.add(task4)
+shop1.add(task5)
 shop1.remove(2)
 shop1.update(1,"Meubles")
 shop1.display(task1)

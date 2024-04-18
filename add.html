@@ -8,6 +8,65 @@
     <script src='https://code.jquery.com/jquery-2.2.4.js'></script>
 </head>
 <body>
-    
+    <main class="main-wrapper">
+
+        <header class="header">
+
+            <div class="logo-container">
+                <img id="logoimg"
+                    src="images/png-transparent-task-project-management-computer-icons-service-others-miscellaneous-text-logo.png">
+            </div>
+
+            <div class="menu-container">
+                <div class="navbar">
+                    <p class="url">
+                        <a href="index.html">All Task</a>
+                        <a href="contact.html">Contact Us</a>
+                    </p>
+                </div>
+                <img id="logouser" src="images/user-icon-2048x2048-ihoxz4vq.png">
+            </div>
+
+        </header>
+
+        <section class="main-section">
+           
+            <div class="content">
+                <button class="button">Create New</button>
+                <div>
+                    <form action="/action_page.php">
+                      <label for="fname">Description</label>
+                      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                  
+                      <label for="lname">Creation date</label>
+                      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                      <label for="lname">DEADLINE</label>
+                      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                      <label for="lname">ASSESSMENT</label>
+                      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                  
+                      <label for="country">Country</label>
+                      <select id="country" name="country">
+                        <option value="australia">Australia</option>
+                        <option value="canada">Canada</option>
+                        <option value="usa">USA</option>
+                      </select>
+                    
+                      <input type="submit" value="Submit">
+                    </form>
+                  </div>
+                    
+            </div>
+
+        </section>
+
+        <footer class="footer">
+           
+        </footer>
+
+    </main>
+    <script src="index.js"></script>
 </body>
 </html>
