@@ -82,6 +82,16 @@ $("#submit").on("click", function () {
     addTask(des, dead, eval)
 })
 
+var display = function (task) {
+    return task.desciption + " " + task.date + " " + task.dateDeadline + " " + task.evaluation
+}
+
+var displayAll = function () {
+    for (var i = 0; i < this.items.length; i++) {
+        console.log(display(this.items[i]))
+    }
+}
+
 
 var remove = function (id) {
     return filter(this.items, function (element) {
@@ -109,15 +119,6 @@ var update = function (id, newval) {
     return arr
 }
 
-var display = function (task) {
-    return task.desciption + " " + task.date + " " + task.dateDeadline + " " + task.evaluation
-}
-
-var displayAll = function () {
-    for (var i = 0; i < this.items.length; i++) {
-        console.log(display(this.items[i]))
-    }
-}
 
 var task1 = makeTask("Task1", "30/04/2024", " Task 1 not complete")
 var task2 = makeTask("Task2", "30/05/2024", " Task 2 not complete")
@@ -186,7 +187,7 @@ shop1.displayAll()
 shop1.addTask("task6", "31/04/2024", "Task6 is not complet")
 shop1.addTask("task7", "1/09/2024", "Task7 is not complet")
 
-var pictures= ["images/20498237-task-manger.png","images/25.jpg","images/2024.png"]
+var pictures= ["images/2024.png","images/20498237-task-manger.png","images/25.jpg"]
 $('#images').attr('src', pictures[0])
 var count =0
    $('#images').on({
