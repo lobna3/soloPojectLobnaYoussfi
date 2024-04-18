@@ -1,65 +1,101 @@
 .header {
     width: 100%;
-    height: 80px;
+    height: 100px;
     background: #faf5f5;
 }
 
 .main-section {
     width: 100%;
-    height: 800px;
-    background: #c0b7b7;
+    height: 900px;
+    background: #D8D8D8;
 }
 
 .footer {
     clear: both;
     width: 100%;
-    height: 61px;
-    background: #bdb8b8;
+    height: 40px;
+    background: #b9aaaa;
     bottom: 0px;
-
+    text-align: center;
+  
 }
-#logoimg{
+
+#logoimg {
 
     width: 5em;
     height: 80px;
     float: left;
 }
-#logouser{
+
+#logouser {
 
     width: 5em;
     height: 80px;
     float: right;
 }
+
 .logo-container {
 
-    background: #4F4949;
     width: 5em;
     height: 80px;
     float: left;
-  
 
 }
-.menu-container {
 
-    background: #f1f0f0;
+.menu-container {
     width: 80%;
     height: 40px;
     float: right;
     padding-right: 20px;
 }
+
+.navbar {
+    width: 25%;
+    height: 0px;
+    text-align: center;
+    top: 0px;
+}
+
 .url {
     color: antiquewhite;
     text-align: center;
 }
-a:link, a:visited {
+
+a:link,
+a:visited {
     background-color: #f44336;
     color: white;
     padding: 15px 25px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
+}
+
+a:hover,
+a:active {
+    background-color: red;
+}
+
+.content {
+    background: #fcfbfb;
+    padding: 20px 20px 20px 20px;
+    width: 70%;
+    height: 300px;
+    text-align: center;
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
   }
   
-  a:hover, a:active {
-    background-color: red;
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
   }
