@@ -186,21 +186,17 @@ shop1.displayAll()
 shop1.addTask("task6", "31/04/2024", "Task6 is not complet")
 shop1.addTask("task7", "1/09/2024", "Task7 is not complet")
 
-
-
-var pictures= []
-/**var count =0
+var pictures= ["images/20498237-task-manger.png","images/25.jpg","images/2024.png"]
+$('#images').attr('src', pictures[0])
+var count =0
    $('#images').on({
      'click': function () {
-       count=(count+1)% product1.images.length
-      $('#images').attr('src', product1.images[count])
+       count=(count+1)% pictures.length
+      $('#images').attr('src', pictures[count])
       
      }
-
-       $('#images').attr('src', task1.images[0])
-   });*/
-
-
+   });
+  
 /** var count = 0
        $("#inputPlus").on("click", function () {
            count = +$('#test').val()
