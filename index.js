@@ -52,10 +52,6 @@ function each(array, func) {
     }
   }
 
-  var task1= makeTask("","","")
-  var task2=makeTask("","","")
-  var task3= makeTask("","","")
-
   function makeShop() {
     var obj = {}
     obj.items = []
@@ -67,7 +63,76 @@ function each(array, func) {
     return obj
   }
 
-  
+  var add = function () {
+    this.items.push(task1)
+    return this.items
+  }
 
+  var remove = function(id){
+    return filter(this.items,function(element){
+        return element.id !== id
+    })
+  }
+
+  var removeById = function (id) {
+    var arr = this.items
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i].id === id) {
+        arr.splice(i, 0)
+      }
+    }
+    return arr
+  }
+
+  var update = function(id,newval){
+    var arr = this.items
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i].id === id) {
+       arr[i].desciption=newval
+      }
+    }
+    return arr
+  }
+
+  var display= function(task){
+    return task.desciption+" "+task.date+" "+task.dateDeadline+" "+task.evaluation
+   }
+
+   var displayAll = function(){
+    for (var i =0; i<this.items.length;i++){
+        console.log(display(this.items[i]))
+    }
+   }
+   
+   var task1= makeTask("","","")
+   var task2=makeTask("","","")
+   var task3= makeTask("","","")
+
+   $('li#des').append(task1.desciption)
+   $('li#datedeadline').append(task1.dateDeadline)
+   $('li#date').append(task1.date)
+   $('li#evaluation').append(task1.evaluation)
+   $('#images').attr('src', task1.images[0])
+   
+   var count =0
+   $('#images').on({
+     'click': function () {
+       count=(count+1)% product1.images.length
+      $('#images').attr('src', product1.images[count])
+      
+     }
+   });
+
+   var shop1 = makeShop()
+shop1.add(task1)
+shop1.add(task2)
+shop1.add(task3)
+shop1.remove(2)
+shop1.update(1,"Meubles")
+shop1.display(task1)
+shop1.display(task2)
+shop1.displayAll()
+   
+ 
 
   
