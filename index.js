@@ -74,13 +74,6 @@ var addTask = function (desciption, dateDeadline, evaluation) {
 }
 
 var id = generateID();
-var des = $('#Description')
-var dead = $('#DEADLINE').val()
-var eval = $('#ASSESSMENT').val()
-
-$("#submit").on("click", function () {
-    addTask(des, dead, eval)
-})
 
 var display = function (task) {
     return task.desciption + " " + task.date + " " + task.dateDeadline + " " + task.evaluation
@@ -187,39 +180,62 @@ shop1.displayAll()
 shop1.addTask("task6", "31/04/2024", "Task6 is not complet")
 shop1.addTask("task7", "1/09/2024", "Task7 is not complet")
 
-var pictures= ["images/2024.png","images/20498237-task-manger.png","images/25.jpg"]
+var pictures = ["images/2024.png", "images/20498237-task-manger.png", "images/25.jpg"]
 $('#images').attr('src', pictures[0])
-var count =0
-   $('#images').on({
-     'click': function () {
-       count=(count+1)% pictures.length
-      $('#images').attr('src', pictures[count])
-      
-     }
-   });
+var count = 0
+$('#images').on({
+    'click': function () {
+        count = (count + 1) % pictures.length
+        $('#images').attr('src', pictures[count])
 
-   $(document).ready(function(){
-    $('#Description').change(function(){
+    }
+});
+
+
+var des = $('#Description')
+var dead = $('#DEADLINE')
+var evali = $('#ASSESSMENT')
+
+$("#submit").on("click", function () {
+    addTask(des, dead, evali)
+})
+
+$(document).ready(function () {
+    $('#Description').change(function () {
         var input = $(this).val();
-        $('ul').append('<li>' + input+' <i class="fas fa-check"></i> <i class="fas fa-trash"></i></li>')
+        $('ul').append('<li>' + input + ' <i class="fas fa-check"></i> <i class="fas fa-trash"></i></li>')
         $(this).val();
-    })
-   })
-   $(document).ready(function(){
-    $('#DEADLINE').change(function(){
+    });
+    $('ul').on('click','.fa-trash',function(){
+    $(this).parent('li').fadeOut(200);
+    });
+})
+
+$(document).ready(function () {
+    $('#DEADLINE').change(function () {
         var input = $(this).val();
-        $('ul').append('<li>' + input+' <i class="fas fa-check"> </i> <i class="fas fa-trash"></i></li>')
+        $('ul').append('<li>' + input + ' <i class="fas fa-check"> </i> <i class="fas fa-trash"></i></li>')
         $(this).val();
-    })
-   })
-   $(document).ready(function(){
-    $('#ASSESSMENT').change(function(){
+    });
+    $('ul').on('click','.fa-trash',function(){
+        $(this).parent('li').fadeOut(200);
+        });
+})
+
+$(document).ready(function () {
+    $('#ASSESSMENT').change(function () {
         var input = $(this).val();
-        $('ul').append('<li>' + input+'<i class="fas fa-check"> </i> <i class="fas fa-trash"></i></li>')
+        $('ul').append('<li>' + input + '<i class="fas fa-check"> </i> <i class="fas fa-trash"></i></li>')
         $(this).val();
-    })
-   })
+    });
+    $('ul').on('click','.fa-trash',function(){
+        $(this).parent('li').fadeOut(200);
+        });
+})
 
 
 
-    
+
+
+
+
