@@ -201,21 +201,21 @@ var count =0
    $(document).ready(function(){
     $('#Description').change(function(){
         var input = $(this).val();
-        $('ul').append('<li>' + input+' <i class="fas fa-check"></i></li>')
+        $('ul').append('<li>' + input+' <i class="fas fa-check"></i> <i class="fas fa-trash"></i></li>')
         $(this).val();
     })
    })
    $(document).ready(function(){
     $('#DEADLINE').change(function(){
         var input = $(this).val();
-        $('ul').append('<li>' + input+' <i class="fas fa-check"></i></li>')
+        $('ul').append('<li>' + input+' <i class="fas fa-check"> </i> <i class="fas fa-trash"></i></li>')
         $(this).val();
     })
    })
    $(document).ready(function(){
     $('#ASSESSMENT').change(function(){
         var input = $(this).val();
-        $('ul').append('<li>' + input+'<i class="fas fa-check"></i></li>')
+        $('ul').append('<li>' + input+'<i class="fas fa-check"> </i> <i class="fas fa-trash"></i></li>')
         $(this).val();
     })
    })

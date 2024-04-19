@@ -149,5 +149,13 @@ a:active {
     color: #f44336;
   }
 
-  
+  ul li {
+    background: #eee;
+    color: #333;
+    height: 40px;
+    border-radius: 50px;
+    list-style-type: none;
+    font-size: 30px;
+   background-color: #f0e3e2;
+  }
  
