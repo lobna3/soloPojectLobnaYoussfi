@@ -201,10 +201,9 @@ var dead = $('#DEADLINE').change(function(){
 var evali = $('#ASSESSMENT').change(function(){
     $(this).val();
 })
-console.log(des,dead,evali)
+
 $("#submit").on("click", function () {
-    addTask(des, dead, evali)
-   
+    addTask(des, dead, evali) 
 })
 
 $(document).ready(function () {
