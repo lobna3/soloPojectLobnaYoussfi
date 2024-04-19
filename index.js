@@ -192,12 +192,19 @@ $('#images').on({
 });
 
 
-var des = $('#Description')
-var dead = $('#DEADLINE')
-var evali = $('#ASSESSMENT')
-
+var des = $('#Description').change(function(){
+    $(this).val();
+})
+var dead = $('#DEADLINE').change(function(){
+    $(this).val();
+})
+var evali = $('#ASSESSMENT').change(function(){
+    $(this).val();
+})
+console.log(des,dead,evali)
 $("#submit").on("click", function () {
     addTask(des, dead, evali)
+   
 })
 
 $(document).ready(function () {
